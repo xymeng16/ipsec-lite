@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.11)
+project(ipsec-lite)
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+find_package(sodium)
+include_directories(include)
+file(GLOB SRC src/*.cpp)
+add_library(ipsec ${SRC})
